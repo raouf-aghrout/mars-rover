@@ -1,10 +1,9 @@
-package com.tw.marsrover;
+package com.tw.marsrover.rover;
 
 public class Rover {
 
     private int xCoordinate;
     private int yCoordinate;
-    private CompassBearing compassBearing;
 
     public int getxCoordinate() {
         return xCoordinate;
@@ -20,13 +19,5 @@ public class Rover {
 
     public void setyCoordinate(int yCoordinate) {
         this.yCoordinate = yCoordinate;
-    }
-
-    public CompassBearing getCompassBearing() {
-        return compassBearing;
-    }
-
-    public void setCompassBearing(CompassBearing compassBearing) {
-        this.compassBearing = compassBearing;
     }
 }
