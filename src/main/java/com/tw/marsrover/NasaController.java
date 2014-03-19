@@ -1,6 +1,6 @@
 package com.tw.marsrover;
 
-public class MarsRoverApplication {
+public class NasaController {
 
     public static void main(String[] args) {
 

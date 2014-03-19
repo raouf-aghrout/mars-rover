@@ -5,32 +5,32 @@ import com.tw.marsrover.plateau.Plateau;
 
 public class Rover {
 
-    private int xCoordinate;
-    private int yCoordinate;
+    private int coordinateX;
+    private int coordinateY;
     private Direction direction;
     private Plateau plateau;
 
-    public Rover(int xCoordinate, int yCoordinate, Direction direction, Plateau plateau) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+    public Rover(int coordinateX, int coordinateY, Direction direction, Plateau plateau) {
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
         this.direction = direction;
         this.plateau = plateau;
     }
 
-    public int getxCoordinate() {
-        return xCoordinate;
+    public int getCoordinateX() {
+        return coordinateX;
     }
 
-    public void setxCoordinate(int xCoordinate) {
-        this.xCoordinate = xCoordinate;
+    public void setCoordinateX(int coordinateX) {
+        this.coordinateX = coordinateX;
     }
 
-    public int getyCoordinate() {
-        return yCoordinate;
+    public int getCoordinateY() {
+        return coordinateY;
     }
 
-    public void setyCoordinate(int yCoordinate) {
-        this.yCoordinate = yCoordinate;
+    public void setCoordinateY(int coordinateY) {
+        this.coordinateY = coordinateY;
     }
 
     public Direction getDirection() {
@@ -43,9 +43,5 @@ public class Rover {
 
     public Plateau getPlateau() {
         return plateau;
-    }
-
-    public void setPlateau(Plateau plateau) {
-        this.plateau = plateau;
     }
 }
