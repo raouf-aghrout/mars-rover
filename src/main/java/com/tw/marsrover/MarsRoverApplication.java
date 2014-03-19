@@ -1,6 +1,6 @@
 package com.tw.marsrover;
 
-public class MarsRover {
+public class MarsRoverApplication {
 
     public static void main(String[] args) {
 
