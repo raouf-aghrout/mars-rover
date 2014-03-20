@@ -1,4 +1,4 @@
-package com.tw.marsrover.plateau;
+package com.tw.marsrover;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,15 +7,11 @@ import static junit.framework.Assert.assertTrue;
 
 public class PlateauTest {
 
-    private int upperBoundCoordinateX;
-    private int upperBoundCoordinateY;
     private Plateau plateau;
 
     @Before
     public void setUp() {
-        upperBoundCoordinateX = 5;
-        upperBoundCoordinateY = 5;
-        plateau = new Plateau(upperBoundCoordinateX, upperBoundCoordinateY);
+        plateau = new Plateau(5, 5);
     }
 
     @Test

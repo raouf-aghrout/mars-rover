@@ -3,7 +3,7 @@ package com.tw.marsrover.direction;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.assertEquals;
 
 public class EastDirectionTest {
 
@@ -16,11 +16,16 @@ public class EastDirectionTest {
 
     @Test
     public void whenEastDirectionTurnsRightNewDirectionIsSouth() {
-        assertTrue(eastDirection.spinRight().getClass().equals(SouthDirection.class));
+        assertEquals(SouthDirection.class, eastDirection.spinRight().getClass());
     }
 
     @Test
     public void whenEastDirectionTurnsLeftNewDirectionIsNorth() {
-        assertTrue(eastDirection.spinLeft().getClass().equals(NorthDirection.class));
+        assertEquals(NorthDirection.class, eastDirection.spinLeft().getClass());
+    }
+
+    @Test
+    public void whenEastDirectionMovesForwardCoordinateXIncrements() {
+
     }
 }

@@ -1,4 +1,4 @@
-package com.tw.marsrover.plateau;
+package com.tw.marsrover;
 
 public class Plateau {
 

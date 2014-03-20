@@ -1,5 +1,7 @@
 package com.tw.marsrover.direction;
 
+import com.tw.marsrover.Rover;
+
 public class EastDirection implements Direction {
 
     @Override
@@ -10,5 +12,10 @@ public class EastDirection implements Direction {
     @Override
     public Direction spinLeft() {
         return new NorthDirection();
+    }
+
+    @Override
+    public void moveForward(Rover rover) {
+
     }
 }
