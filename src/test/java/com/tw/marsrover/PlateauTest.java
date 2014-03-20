@@ -3,7 +3,7 @@ package com.tw.marsrover;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.assertEquals;
 
 public class PlateauTest {
 
@@ -16,6 +16,7 @@ public class PlateauTest {
 
     @Test
     public void whenPlateauIsConstructedLowerLeftCoordinatesAreZeroZero() {
-        assertTrue(plateau.getLowerBoundCoordinateX() == 0 && plateau.getLowerBoundCoordinateY() == 0);
+        assertEquals(0, plateau.getLowerBoundCoordinateX());
+        assertEquals(0, plateau.getLowerBoundCoordinateY());
     }
 }

@@ -1,19 +1,22 @@
-package com.tw.marsrover.direction;
+package com.tw.marsrover.command;
 
 import com.tw.marsrover.Plateau;
 import com.tw.marsrover.Rover;
+import com.tw.marsrover.direction.NorthDirection;
+import com.tw.marsrover.direction.WestDirection;
 import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
-public class NorthDirectionTest {
+public class SpinLeftCommandTest {
 
     private Plateau plateau;
     private int xCoordinate;
     private int yCoordinate;
     private NorthDirection northDirection;
     private Rover rover;
+    private Command command;
 
     @Before
     public void setUp() {
@@ -22,21 +25,12 @@ public class NorthDirectionTest {
         yCoordinate = 2;
         northDirection = new NorthDirection();
         rover = new Rover(plateau, xCoordinate, yCoordinate, northDirection);
+        command = new SpinLeftCommand();
     }
 
     @Test
-    public void whenNorthDirectionTurnsRightNewDirectionIsEast() {
-        assertEquals(EastDirection.class, northDirection.spinRight().getClass());
-    }
-
-    @Test
-    public void whenNorthDirectionTurnsLeftNewDirectionIsWest() {
-        assertEquals(WestDirection.class, northDirection.spinLeft().getClass());
-    }
-
-    @Test
-    public void whenNorthDirectionMovesForwardCoordinateYIncrements() {
-        northDirection.moveForward(rover);
-        assertEquals(++yCoordinate, rover.getCoordinateY());
+    public void whenSpinLeftCommandIsExecutedRoverSpinsLeft() {
+        command.execute(rover);
+        assertEquals(WestDirection.class, rover.getDirection().getClass());
     }
 }

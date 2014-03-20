@@ -5,14 +5,14 @@ import com.tw.marsrover.direction.Direction;
 public class Rover {
 
     private Plateau plateau;
-    private int xCoordinate;
-    private int yCoordinate;
+    private int coordinateX;
+    private int coordinateY;
     private Direction direction;
 
-    public Rover(Plateau plateau, int xCoordinate, int yCoordinate, Direction direction) {
+    public Rover(Plateau plateau, int coordinateX, int coordinateY, Direction direction) {
         this.plateau = plateau;
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
         this.direction = direction;
     }
 
@@ -20,20 +20,20 @@ public class Rover {
         return plateau;
     }
 
-    public int getxCoordinate() {
-        return xCoordinate;
+    public int getCoordinateX() {
+        return coordinateX;
     }
 
-    public void setxCoordinate(int xCoordinate) {
-        this.xCoordinate = xCoordinate;
+    public void setCoordinateX(int coordinateX) {
+        this.coordinateX = coordinateX;
     }
 
-    public int getyCoordinate() {
-        return yCoordinate;
+    public int getCoordinateY() {
+        return coordinateY;
     }
 
-    public void setyCoordinate(int yCoordinate) {
-        this.yCoordinate = yCoordinate;
+    public void setCoordinateY(int coordinateY) {
+        this.coordinateY = coordinateY;
     }
 
     public Direction getDirection() {
@@ -42,5 +42,23 @@ public class Rover {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public void spinRight() {
+        direction = getDirection().spinRight();
+    }
+
+    public void spinLeft() {
+        direction = getDirection().spinLeft();
+    }
+
+    public void moveForward() {
+        getDirection().moveForward(this);
+    }
+
+    public String broadcastLocation() {
+        return coordinateX + " "
+                + coordinateY + " "
+                + Character.toString(getDirection().getClass().getSimpleName().charAt(0));
     }
 }

@@ -16,6 +16,6 @@ public class EastDirection implements Direction {
 
     @Override
     public void moveForward(Rover rover) {
-
+        rover.setCoordinateX(rover.getCoordinateX() + 1);
     }
 }
