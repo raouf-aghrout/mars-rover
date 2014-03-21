@@ -1,6 +1,6 @@
 package com.thoughtworks.marsrover.command;
 
-public enum CommandType {
+public enum CommandLookup {
 
     R(new SpinRightCommand()),
 
@@ -10,7 +10,11 @@ public enum CommandType {
 
     private final Command command;
 
-    CommandType(Command command) {
+    CommandLookup(Command command) {
         this.command = command;
+    }
+
+    public Command getCommand() {
+        return command;
     }
 }

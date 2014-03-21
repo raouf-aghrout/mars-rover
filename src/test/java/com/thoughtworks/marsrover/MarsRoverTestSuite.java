@@ -7,7 +7,7 @@ import com.thoughtworks.marsrover.direction.EastDirectionTest;
 import com.thoughtworks.marsrover.direction.NorthDirectionTest;
 import com.thoughtworks.marsrover.direction.SouthDirectionTest;
 import com.thoughtworks.marsrover.direction.WestDirectionTest;
-import com.thoughtworks.marsrover.utils.InputParserTest;
+import com.thoughtworks.marsrover.util.InputUtilTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -20,7 +20,7 @@ import org.junit.runners.Suite;
         NorthDirectionTest.class,
         SouthDirectionTest.class,
         WestDirectionTest.class,
-        InputParserTest.class,
+        InputUtilTest.class,
         PlateauTest.class,
         RoverTest.class
 })

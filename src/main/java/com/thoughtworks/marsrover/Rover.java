@@ -1,6 +1,9 @@
 package com.thoughtworks.marsrover;
 
+import com.thoughtworks.marsrover.command.Command;
 import com.thoughtworks.marsrover.direction.Direction;
+
+import java.util.ArrayList;
 
 public class Rover {
 
@@ -42,6 +45,12 @@ public class Rover {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public void executeCommandList(ArrayList<Command> commands) {
+        for (Command command : commands) {
+            command.execute(this);
+        }
     }
 
     public void spinRight() {
