@@ -1,3 +1,12 @@
+// Tasks:
+
+// TODO : Javadoc? Comments?
+// TODO : Eclipse version
+// TODO : Command line version
+// TODO : Explanation of design & assumptions
+
+// Exceptions:
+
 // TODO : Input file formatted incorrectly
 // TODO : Negative co-ordinates given to Plateau constructor
 // TODO : Try to create Rover with invalid Direction

@@ -61,4 +61,55 @@ public class RoverTest extends BaseTest {
         assertEquals(4, rover.getCoordinateY());
         assertEquals(NorthDirection.class, rover.getDirection().getClass());
     }
+
+    @Test
+    public void whenHardCodedTestInputIsRunCorrectOutputIsReturned() {
+        // Test Input:
+        // 5 5
+        Plateau plateau = new Plateau(5, 5);
+
+        // 1 2 N
+        Rover roverOne = new Rover(plateau, 1, 2, new NorthDirection());
+
+        // LMLMLMLMM
+        ArrayList<Command> roverOneCommands = new ArrayList<Command>();
+        roverOneCommands.add(new SpinLeftCommand());
+        roverOneCommands.add(new MoveForwardCommand());
+        roverOneCommands.add(new SpinLeftCommand());
+        roverOneCommands.add(new MoveForwardCommand());
+        roverOneCommands.add(new SpinLeftCommand());
+        roverOneCommands.add(new MoveForwardCommand());
+        roverOneCommands.add(new SpinLeftCommand());
+        roverOneCommands.add(new MoveForwardCommand());
+        roverOneCommands.add(new MoveForwardCommand());
+        roverOne.executeCommandList(roverOneCommands);
+
+        // 3 3 E
+        Rover roverTwo = new Rover(plateau, 3, 3, new EastDirection());
+
+        // MMRMMRMRRM
+        ArrayList<Command> roverTwoCommands = new ArrayList<Command>();
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwoCommands.add(new SpinRightCommand());
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwoCommands.add(new SpinRightCommand());
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwoCommands.add(new SpinRightCommand());
+        roverTwoCommands.add(new SpinRightCommand());
+        roverTwoCommands.add(new MoveForwardCommand());
+        roverTwo.executeCommandList(roverTwoCommands);
+
+        // Expected Output:
+        // 1 3 N
+        assertEquals(1, roverOne.getCoordinateX());
+        assertEquals(3, roverOne.getCoordinateY());
+        assertEquals(NorthDirection.class, roverOne.getDirection().getClass());
+
+        // 5 1 E
+        assertEquals(5, roverTwo.getCoordinateX());
+        assertEquals(1, roverTwo.getCoordinateY());
+        assertEquals(EastDirection.class, roverTwo.getDirection().getClass());
+    }
 }
