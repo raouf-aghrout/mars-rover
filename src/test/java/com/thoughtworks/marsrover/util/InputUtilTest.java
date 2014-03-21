@@ -1,5 +1,6 @@
 package com.thoughtworks.marsrover.util;
 
+import com.thoughtworks.marsrover.BaseTest;
 import com.thoughtworks.marsrover.Plateau;
 import com.thoughtworks.marsrover.Rover;
 import com.thoughtworks.marsrover.command.Command;
@@ -7,7 +8,6 @@ import com.thoughtworks.marsrover.command.MoveForwardCommand;
 import com.thoughtworks.marsrover.command.SpinLeftCommand;
 import com.thoughtworks.marsrover.command.SpinRightCommand;
 import com.thoughtworks.marsrover.direction.NorthDirection;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
@@ -15,14 +15,7 @@ import java.util.ArrayList;
 
 import static junit.framework.Assert.assertEquals;
 
-public class InputUtilTest {
-
-    private Plateau plateau;
-
-    @Before
-    public void setUp() throws Exception {
-        plateau = new Plateau(5, 5);
-    }
+public class InputUtilTest extends BaseTest {
 
     @Test
     public void inputStringsCanBeParsedFromFile() throws Exception {

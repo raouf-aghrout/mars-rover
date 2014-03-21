@@ -48,9 +48,8 @@ public class Rover {
     }
 
     public void executeCommandList(ArrayList<Command> commands) {
-        for (Command command : commands) {
+        for (Command command : commands)
             command.execute(this);
-        }
     }
 
     public void spinRight() {

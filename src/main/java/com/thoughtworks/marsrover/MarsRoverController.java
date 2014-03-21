@@ -16,12 +16,13 @@ public class MarsRoverController {
         List<String> roverInput = inputFileAsList.subList(1, inputFileAsList.size());
 
         System.out.println("Input:" + "\n");
-        for (String line : inputFileAsList) System.out.println(line);
+        for (String line : inputFileAsList)
+            System.out.println(line);
 
         System.out.println("\n" + "Output:" + "\n");
         Plateau plateau = new InputUtil().parsePlateauInput(inputFileAsList.get(0));
-
-        // Subsequent pairs of instructions are used to create a Rover and run a set of Commands on that Rover
+        // Subsequent pairs of instructions are used to create a Rover and a set of Commands
+        // We then run the set of Commands on that Rover and repeat this for the next pair of instructions
         for (int i = 0; i < roverInput.size(); i += 2) {
             Rover rover = InputUtil.parsePositionInput(roverInput.get(i), plateau);
             ArrayList<Command> commands = InputUtil.parseCommandInput(roverInput.get(i + 1));
