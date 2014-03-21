@@ -125,7 +125,9 @@ Note - For the second option you will need to have Java and / or Maven in your P
 or verify your installation in Unix / Mac OS. For help, see:
 
 Windows - http://www.mkyong.com/maven/how-to-install-maven-in-windows/
+
 Unix - http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+
 Mac OS - http://www.mkyong.com/maven/install-maven-on-mac-osx/
 
 Possible Extensions
