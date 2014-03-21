@@ -2,8 +2,8 @@ Mars Rover
 ==========
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular,
-must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send
-back to Earth.
+must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to
+send back to Earth.
 
 A rover’s position and location is represented by a combination of x and y co-ordinates and a letter representing one of
 the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position
@@ -56,7 +56,7 @@ I began by identifying the Objects and Interfaces I would need, the Plateau, Rov
 these as the very basic POJO's, as well as this I also created an empty MarsRover entry class and a InputUtil utility
 class for reading in the input. I then began looking at using Design Patterns and Test Driven Development.
 
-I wanted to demonstrate as per the specification that I could use strong Object Oriented (OO) programming concepts, so
+I wanted to demonstrate, as per the specification, that I could use strong Object Oriented (OO) programming concepts, so
 I have attempted to implement two Design Patterns that I studied for this task. Firstly I studied and implemented the
 State design pattern to represent the different Directions a Rover can have as States, as there was a need for different
 functionality on the behaviours of the Rover dependent on which Direction (State) it was in. Secondly I studied and
@@ -68,10 +68,10 @@ I come from a non TDD background, so I have researched this and attempted to com
 approach. I followed the Red, Green, Refactor approach, as such all of my test were written first, then ran and broken
 (Red), then I implemented the code / logic (Green) and finally any refactoring that was needed. I have implemented all
 of my tests using JUnit and have included a Test Suite class to enable them to all be run at once. Again, this is my
-first real delve into TDD solo, so I may be lacking test coverage in some areas and have over tested in other.
+first real delve into TDD solo, so I may be lacking test coverage in some areas and have over tested in others.
 
 In conclusion I'd love the opportunity to discuss both the Design Pattern implementations and TDD approach further with
-your developers.
+your developers, as I'm sure there's a lot I can learn and improve in these aspects.
 
 Assumptions
 ===========
@@ -79,6 +79,54 @@ Assumptions
 - When a Plateau is created, the bottom right co-ordinates are always (0, 0)
 - The square directly North from (x, y) is (x, y + 1)
 - The test input and output is always the same, clean and present, so this doesn't need to be validated
+
+Development Environment
+=======================
+
+I developed this in the following application:
+
+- Java SE 1.7
+- IntelliJ IDEA 13.0.3 Community Edition
+- MyEclipse Enterprise Workbench 2014 (Eclipse 4.3.1 Based)
+
+Note - I wanted to make sure their was support for both of these development environments, please ensure that your
+version of Java in your project facets is set to Java 1.7, and the compiler you are using is Java 1.7, whichever IDE you
+import into.
+
+3rd Party Libraries Used:
+=========================
+
+- Build Tool: Apache Maven 3.1.1
+- Test Tool:  JUnit 4.11
+
+Note - Apache Maven should handle the JUnit dependency, so there should be no need to manually do this. You will however
+need to have Apache Maven downloaded locally and point your IDE to your 'M2_HOME' directory.
+
+Execution
+=========
+
+To get up and running with the code:
+
+- Import and setup the project in your chosen IDE
+- Run the Maven 'clean' and 'install' life cycles, this will run all the tests in Maven and build you a .jar
+- Run the MarsRover class, this will test the input and output in the command line
+
+Alternatively you can run the code in the command line, from the root Project folder, in this case inside MarsRover:
+
+Maven:
+- This will run a clean, run all of the tests and package a .jar file.
+    - mvn clean install
+
+Java:
+- This will run the executable .jar file you just packaged with Maven.
+    - java -jar target\MarsRover-1.0-SNAPSHOT.jar
+
+Note - For the second option you will need to have Java and / or Maven in your Path variables if you are using Windows
+or verify your installation in Unix / Mac OS. For help, see:
+
+Windows - http://www.mkyong.com/maven/how-to-install-maven-in-windows/
+Unix - http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/
+Mac OS - http://www.mkyong.com/maven/install-maven-on-mac-osx/
 
 Possible Extensions
 ===================
@@ -88,33 +136,13 @@ Possible Extensions
     - The Rover being placed out of bounds of the Plateau
     - The Rover moving out of bounds of the Plateau
     - The Rover being constructed with a null Direction or Plateau
-- Allow the rover to move backwards
-
-Additional Information
-======================
-
-Development Environment:
-
-    - Java SE 1.7
-    - IntelliJ IDEA 13.0.3 Community Edition
-    - MyEclipse Enterprise Workbench 2014 (Eclipse 4.3.1 Based)
-
-Note - I wanted to make sure their was support for both of these development environments, please ensure that your
-version of Java in your project facets is set to Java 1.7, and the compiler you are using is Java 1.7, whichever you
-import into.
-
-3rd Libraries Used:
-
-    - Build Tool: Apache Maven 3.1.1
-    - Test Tool:  JUnit 4.11
-
-Note - Apache Maven should handle the JUnit dependency, so there should be no need to manually do this. You may however
-need to have Apache Maven downloaded locally and point this at your IDE.
+- Allow the Rover to move backwards
 
 Finally
 =======
 
-If you do have any issues getting the code to run do not hesitate to contact me!
+I hope you find the code readable and intuitive. If you do have any issues getting the code to run do not hesitate to
+contact me!
 
 (+44) 07718219995
 aghrout.raouf@gmail.com

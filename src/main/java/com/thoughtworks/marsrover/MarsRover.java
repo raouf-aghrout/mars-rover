@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-class MarsRover {
+public class MarsRover {
 
     public static void main(String[] args) throws IOException {
 
