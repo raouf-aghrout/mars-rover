@@ -1,6 +1,7 @@
-*.iml
 *.idea
+*.settings
 *.classpath
 *.project
 *.eml
+*.iml
 *.userlibraries

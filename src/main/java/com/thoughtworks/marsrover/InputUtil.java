@@ -1,4 +1,4 @@
-package com.thoughtworks.marsrover.util;
+package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.Plateau;
 import com.thoughtworks.marsrover.Rover;

@@ -1,17 +1,16 @@
 package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.command.Command;
-import com.thoughtworks.marsrover.util.InputUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-class MarsRoverController {
+class MarsRover {
 
     public static void main(String[] args) throws IOException {
 
-        ArrayList<String> inputFileAsList = InputUtil.parseInputFromFile(MarsRoverController.class.getResourceAsStream("/input.txt"));
+        ArrayList<String> inputFileAsList = InputUtil.parseInputFromFile(MarsRover.class.getResourceAsStream("/input.txt"));
         // The first instruction is separated out, as this is for creating the Plateau, which is global for all Rovers
         List<String> roverInput = inputFileAsList.subList(1, inputFileAsList.size());
 

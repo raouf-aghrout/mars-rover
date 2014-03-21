@@ -1,6 +1,7 @@
-package com.thoughtworks.marsrover.util;
+package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.BaseTest;
+import com.thoughtworks.marsrover.InputUtil;
 import com.thoughtworks.marsrover.Plateau;
 import com.thoughtworks.marsrover.Rover;
 import com.thoughtworks.marsrover.command.Command;

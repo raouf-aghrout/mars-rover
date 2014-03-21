@@ -43,6 +43,10 @@ public class Rover {
         return direction;
     }
 
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
     public void executeCommandList(ArrayList<Command> commands) {
         for (Command command : commands)
             command.execute(this);
