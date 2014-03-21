@@ -5,7 +5,7 @@ import com.thoughtworks.marsrover.Rover;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 public class WestDirectionTest extends BaseTest {
 

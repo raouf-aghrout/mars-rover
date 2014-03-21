@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Rover {
 
-    private Plateau plateau;
+    private final Plateau plateau;
     private int coordinateX;
     private int coordinateY;
     private Direction direction;
@@ -41,10 +41,6 @@ public class Rover {
 
     public Direction getDirection() {
         return direction;
-    }
-
-    public void setDirection(Direction direction) {
-        this.direction = direction;
     }
 
     public void executeCommandList(ArrayList<Command> commands) {

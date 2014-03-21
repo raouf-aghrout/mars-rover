@@ -5,7 +5,7 @@ import com.thoughtworks.marsrover.direction.Direction;
 
 public abstract class BaseTest {
 
-    protected Plateau plateau = new Plateau(5, 5);
+    protected final Plateau plateau = new Plateau(5, 5);
     protected int xCoordinate = 2;
     protected int yCoordinate = 2;
     protected Direction direction;

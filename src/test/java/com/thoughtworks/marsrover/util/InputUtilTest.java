@@ -13,7 +13,7 @@ import org.junit.Test;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 public class InputUtilTest extends BaseTest {
 

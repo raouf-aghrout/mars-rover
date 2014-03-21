@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarsRoverController {
+class MarsRoverController {
 
     public static void main(String[] args) throws IOException {
 
@@ -20,7 +20,7 @@ public class MarsRoverController {
             System.out.println(line);
 
         System.out.println("\n" + "Output:" + "\n");
-        Plateau plateau = new InputUtil().parsePlateauInput(inputFileAsList.get(0));
+        Plateau plateau = InputUtil.parsePlateauInput(inputFileAsList.get(0));
         // Subsequent pairs of instructions are used to create a Rover and a set of Commands
         // We then run the set of Commands on that Rover and repeat this for the next pair of instructions
         for (int i = 0; i < roverInput.size(); i += 2) {

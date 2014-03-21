@@ -4,8 +4,8 @@ public class Plateau {
 
     private final int lowerBoundCoordinateX = 0;
     private final int lowerBoundCoordinateY = 0;
-    private int upperBoundCoordinateX;
-    private int upperBoundCoordinateY;
+    private final int upperBoundCoordinateX;
+    private final int upperBoundCoordinateY;
 
     public Plateau(int upperBoundCoordinateX, int upperBoundCoordinateY) {
         this.upperBoundCoordinateX = upperBoundCoordinateX;

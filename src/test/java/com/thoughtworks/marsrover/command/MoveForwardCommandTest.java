@@ -6,7 +6,7 @@ import com.thoughtworks.marsrover.direction.NorthDirection;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 public class MoveForwardCommandTest extends BaseTest {
 
