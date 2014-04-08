@@ -1,13 +1,6 @@
 package com.thoughtworks.marsrover;
 
-import com.thoughtworks.marsrover.BaseTest;
-import com.thoughtworks.marsrover.InputUtil;
-import com.thoughtworks.marsrover.Plateau;
-import com.thoughtworks.marsrover.Rover;
-import com.thoughtworks.marsrover.command.Command;
-import com.thoughtworks.marsrover.command.MoveForwardCommand;
-import com.thoughtworks.marsrover.command.SpinLeftCommand;
-import com.thoughtworks.marsrover.command.SpinRightCommand;
+import com.thoughtworks.marsrover.command.*;
 import com.thoughtworks.marsrover.direction.NorthDirection;
 import org.junit.Test;
 
@@ -82,6 +75,15 @@ public class InputUtilTest extends BaseTest {
 
         assertEquals(mCommandInput.length(), commandOutput.size());
         assertEquals(MoveForwardCommand.class, commandOutput.get(0).getClass());
+    }
+
+    @Test
+    public void whenBCommandIsParsedMoveBackCommandIsConstructed() throws Exception {
+        String mCommandInput = "B";
+        ArrayList<Command> commandOutput = InputUtil.parseCommandInput(mCommandInput);
+
+        assertEquals(mCommandInput.length(), commandOutput.size());
+        assertEquals(MoveBackCommand.class, commandOutput.get(0).getClass());
     }
 
     @Test

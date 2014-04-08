@@ -30,4 +30,10 @@ public class SouthDirectionTest extends BaseTest {
         direction.moveForward(rover);
         assertEquals(--yCoordinate, rover.getCoordinateY());
     }
+
+    @Test
+    public void whenSouthDirectionMovesBackCoordinateYIncrements() throws Exception {
+        direction.moveBack(rover);
+        assertEquals(++yCoordinate, rover.getCoordinateY());
+    }
 }

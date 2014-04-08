@@ -6,7 +6,9 @@ public enum CommandLookup {
 
     L(new SpinLeftCommand()),
 
-    M(new MoveForwardCommand());
+    M(new MoveForwardCommand()),
+
+    B(new MoveBackCommand());
 
     private final Command command;
 

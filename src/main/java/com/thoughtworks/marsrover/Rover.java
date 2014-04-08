@@ -64,6 +64,10 @@ public class Rover {
         getDirection().moveForward(this);
     }
 
+    public void moveBack() {
+        getDirection().moveBack(this);
+    }
+
     public String broadcastLocation() {
         return coordinateX + " "
                 + coordinateY + " "

@@ -1,5 +1,6 @@
 package com.thoughtworks.marsrover;
 
+import com.thoughtworks.marsrover.command.MoveBackCommandTest;
 import com.thoughtworks.marsrover.command.MoveForwardCommandTest;
 import com.thoughtworks.marsrover.command.SpinLeftCommandTest;
 import com.thoughtworks.marsrover.command.SpinRightCommandTest;
@@ -12,6 +13,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+        MoveBackCommandTest.class,
         MoveForwardCommandTest.class,
         SpinLeftCommandTest.class,
         SpinRightCommandTest.class,

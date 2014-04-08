@@ -1,7 +1,5 @@
 package com.thoughtworks.marsrover;
 
-import com.thoughtworks.marsrover.Plateau;
-import com.thoughtworks.marsrover.Rover;
 import com.thoughtworks.marsrover.command.Command;
 import com.thoughtworks.marsrover.command.CommandLookup;
 import com.thoughtworks.marsrover.direction.Direction;
@@ -16,7 +14,7 @@ import java.util.ArrayList;
 public class InputUtil {
 
     public static ArrayList<String> parseInputFromFile(InputStream fileLocation) throws IOException {
-        ArrayList<String> inputsFromFile = new ArrayList<String>();
+        ArrayList<String> inputsFromFile = new ArrayList<>();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileLocation));
         String fileLine;
 
@@ -44,7 +42,7 @@ public class InputUtil {
 
     public static ArrayList<Command> parseCommandInput(String command) {
         char[] inputArray = command.toCharArray();
-        ArrayList<Command> commandArrayList = new ArrayList<Command>();
+        ArrayList<Command> commandArrayList = new ArrayList<>();
 
         for (char character : inputArray) {
             Command currentCommand = CommandLookup.valueOf(Character.toString(character)).getCommand();

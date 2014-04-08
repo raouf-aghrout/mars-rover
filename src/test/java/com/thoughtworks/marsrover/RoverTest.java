@@ -41,6 +41,12 @@ public class RoverTest extends BaseTest {
     }
 
     @Test
+    public void whenRequestedRoverCanMoveBack() throws Exception {
+        rover.moveBack();
+        assertEquals(--yCoordinate, rover.getCoordinateY());
+    }
+
+    @Test
     public void whenRequestedRoverCanPrintCurrentPosition() throws Exception {
         assertEquals(xCoordinate + " "
                 + yCoordinate + " "
@@ -49,7 +55,7 @@ public class RoverTest extends BaseTest {
 
     @Test
     public void whenRequestedRoverCanExecuteCommandAsAList() throws Exception {
-        ArrayList<Command> commandArrayList = new ArrayList<Command>();
+        ArrayList<Command> commandArrayList = new ArrayList<>();
         commandArrayList.add(new MoveForwardCommand());
         commandArrayList.add(new MoveForwardCommand());
         commandArrayList.add(new SpinLeftCommand());
@@ -72,7 +78,7 @@ public class RoverTest extends BaseTest {
         Rover roverOne = new Rover(plateau, 1, 2, new NorthDirection());
 
         // LMLMLMLMM
-        ArrayList<Command> roverOneCommands = new ArrayList<Command>();
+        ArrayList<Command> roverOneCommands = new ArrayList<>();
         roverOneCommands.add(new SpinLeftCommand());
         roverOneCommands.add(new MoveForwardCommand());
         roverOneCommands.add(new SpinLeftCommand());
@@ -88,7 +94,7 @@ public class RoverTest extends BaseTest {
         Rover roverTwo = new Rover(plateau, 3, 3, new EastDirection());
 
         // MMRMMRMRRM
-        ArrayList<Command> roverTwoCommands = new ArrayList<Command>();
+        ArrayList<Command> roverTwoCommands = new ArrayList<>();
         roverTwoCommands.add(new MoveForwardCommand());
         roverTwoCommands.add(new MoveForwardCommand());
         roverTwoCommands.add(new SpinRightCommand());

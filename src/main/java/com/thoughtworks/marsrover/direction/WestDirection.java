@@ -18,4 +18,9 @@ public class WestDirection implements Direction {
     public void moveForward(Rover rover) {
         rover.setCoordinateX(rover.getCoordinateX() - 1);
     }
+
+    @Override
+    public void moveBack(Rover rover) {
+        rover.setCoordinateX(rover.getCoordinateX() + 1);
+    }
 }
