@@ -82,6 +82,6 @@ public class Rover {
                 || this.getCoordinateY() > this.getPlateau().getUpperBoundCoordinateY()
                 || this.getCoordinateX() < this.getPlateau().getLowerBoundCoordinateX()
                 || this.getCoordinateY() < this.getPlateau().getLowerBoundCoordinateY())
-            throw new LocationOutOfBoundsException();
+            throw new RoverOutOfBoundsException();
     }
 }

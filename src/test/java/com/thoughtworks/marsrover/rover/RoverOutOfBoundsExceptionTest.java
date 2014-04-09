@@ -5,7 +5,7 @@ import com.thoughtworks.marsrover.direction.NorthDirection;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LocationOutOfBoundsExceptionTest extends BaseTest {
+public class RoverOutOfBoundsExceptionTest extends BaseTest {
 
     @Before
     public void setUp() throws Exception {
@@ -14,15 +14,15 @@ public class LocationOutOfBoundsExceptionTest extends BaseTest {
     }
 
 
-    @Test(expected = LocationOutOfBoundsException.class)
-    public void whenRoverAttemptsToMoveOutOfNorthBoundsExceptionIsThrown() {
+    @Test(expected = RoverOutOfBoundsException.class)
+    public void whenRoverMovesOutOfNorthBoundsExceptionIsThrown() {
         rover.setCoordinateX(5);
         rover.setCoordinateY(5);
         rover.moveForward();
     }
 
-    @Test (expected = LocationOutOfBoundsException.class)
-    public void whenRoverAttemptsToMoveOutOfEastBoundsExceptionIsThrown() {
+    @Test (expected = RoverOutOfBoundsException.class)
+    public void whenRoverMovesOutOfEastBoundsExceptionIsThrown() {
         rover.setCoordinateX(5);
         rover.setCoordinateY(5);
         rover.spinRight();
@@ -30,15 +30,15 @@ public class LocationOutOfBoundsExceptionTest extends BaseTest {
     }
 
 
-    @Test (expected = LocationOutOfBoundsException.class)
-    public void whenRoverAttemptsToMoveOutOfSouthBoundsExceptionIsThrown() {
+    @Test (expected = RoverOutOfBoundsException.class)
+    public void whenRoverMovesOutOfSouthBoundsExceptionIsThrown() {
         rover.setCoordinateX(0);
         rover.setCoordinateY(0);
         rover.moveBack();
     }
 
-    @Test (expected = LocationOutOfBoundsException.class)
-    public void whenRoverAttemptsToMoveOutOfWestBoundsExceptionIsThrown() {
+    @Test (expected = RoverOutOfBoundsException.class)
+    public void whenRoverMovesOutOfWestBoundsExceptionIsThrown() {
         rover.setCoordinateX(0);
         rover.setCoordinateY(0);
         rover.spinLeft();
