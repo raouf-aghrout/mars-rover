@@ -5,7 +5,7 @@ import com.thoughtworks.marsrover.direction.NorthDirection;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RoverOutOfBoundsExceptionTest extends BaseTest {
+public class RoverExceptionTest extends BaseTest {
 
     @Before
     public void setUp() throws Exception {
@@ -42,7 +42,6 @@ public class RoverOutOfBoundsExceptionTest extends BaseTest {
         rover.spinRight();
         rover.moveForward();
     }
-
 
     @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverMovesOutOfSouthBoundsExceptionIsThrown() {
