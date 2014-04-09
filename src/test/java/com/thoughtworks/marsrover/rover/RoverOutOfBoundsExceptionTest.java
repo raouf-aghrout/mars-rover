@@ -15,17 +15,17 @@ public class RoverOutOfBoundsExceptionTest extends BaseTest {
 
     @Test(expected = NullPointerException.class)
     public void whenRoverIsCreatedWithANullPlateauExceptionIsThrown() {
-        Rover testRover = new Rover(null, xCoordinate, yCoordinate, direction);
+        new Rover(null, xCoordinate, yCoordinate, direction);
     }
 
     @Test(expected = NullPointerException.class)
     public void whenRoverIsCreatedWithANullDirectionExceptionIsThrown() {
-        Rover testRover = new Rover(plateau, xCoordinate, yCoordinate, null);
+        new Rover(plateau, xCoordinate, yCoordinate, null);
     }
 
     @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverIsCreatedOutOfPlateauBoundsExceptionIsThrown() {
-        Rover testRover = new Rover(plateau, -1, 6, direction);
+        new Rover(plateau, -1, 6, direction);
     }
 
     @Test(expected = RoverOutOfBoundsException.class)
