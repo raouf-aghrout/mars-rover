@@ -1,5 +1,8 @@
 package com.thoughtworks.marsrover.rover;
 
-public class RoverOutOfBoundsException extends RuntimeException {
+class RoverOutOfBoundsException extends RuntimeException {
 
+    public RoverOutOfBoundsException() {
+        super("The Rover cannot be out of bounds of the plateau!");
+    }
 }

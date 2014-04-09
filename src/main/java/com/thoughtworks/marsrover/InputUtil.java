@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class InputUtil {
+class InputUtil {
 
     public static ArrayList<String> parseInputFromFile(InputStream fileLocation) throws IOException {
         ArrayList<String> inputsFromFile = new ArrayList<>();

@@ -13,34 +13,48 @@ public class RoverOutOfBoundsExceptionTest extends BaseTest {
         rover = new Rover(plateau, xCoordinate, yCoordinate, direction);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void whenRoverIsCreatedWithANullPlateauExceptionIsThrown() {
+        Rover testRover = new Rover(null, xCoordinate, yCoordinate, direction);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void whenRoverIsCreatedWithANullDirectionExceptionIsThrown() {
+        Rover testRover = new Rover(plateau, xCoordinate, yCoordinate, null);
+    }
+
+    @Test(expected = RoverOutOfBoundsException.class)
+    public void whenRoverIsCreatedOutOfPlateauBoundsExceptionIsThrown() {
+        Rover testRover = new Rover(plateau, -1, 6, direction);
+    }
 
     @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverMovesOutOfNorthBoundsExceptionIsThrown() {
-        rover.setCoordinateX(5);
-        rover.setCoordinateY(5);
+        rover.setCoordinateX(plateau.getUpperBoundCoordinateX());
+        rover.setCoordinateY(plateau.getUpperBoundCoordinateY());
         rover.moveForward();
     }
 
-    @Test (expected = RoverOutOfBoundsException.class)
+    @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverMovesOutOfEastBoundsExceptionIsThrown() {
-        rover.setCoordinateX(5);
-        rover.setCoordinateY(5);
+        rover.setCoordinateX(plateau.getUpperBoundCoordinateX());
+        rover.setCoordinateY(plateau.getUpperBoundCoordinateY());
         rover.spinRight();
         rover.moveForward();
     }
 
 
-    @Test (expected = RoverOutOfBoundsException.class)
+    @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverMovesOutOfSouthBoundsExceptionIsThrown() {
-        rover.setCoordinateX(0);
-        rover.setCoordinateY(0);
+        rover.setCoordinateX(plateau.getLowerBoundCoordinateX());
+        rover.setCoordinateY(plateau.getLowerBoundCoordinateY());
         rover.moveBack();
     }
 
-    @Test (expected = RoverOutOfBoundsException.class)
+    @Test(expected = RoverOutOfBoundsException.class)
     public void whenRoverMovesOutOfWestBoundsExceptionIsThrown() {
-        rover.setCoordinateX(0);
-        rover.setCoordinateY(0);
+        rover.setCoordinateX(plateau.getLowerBoundCoordinateX());
+        rover.setCoordinateY(plateau.getLowerBoundCoordinateY());
         rover.spinLeft();
         rover.moveForward();
     }

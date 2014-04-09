@@ -14,13 +14,17 @@ public class Rover {
     private Direction direction;
 
     public Rover(Plateau plateau, int coordinateX, int coordinateY, Direction direction) {
+        if (plateau == null) throw new NullPointerException("The Plateau you create the Rover in cannot be null!");
+        if (direction == null) throw new NullPointerException("The Direction the Rover is facing in cannot be null!");
+
         this.plateau = plateau;
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
         this.direction = direction;
+        validateLocation();
     }
 
-    public Plateau getPlateau() {
+    private Plateau getPlateau() {
         return plateau;
     }
 

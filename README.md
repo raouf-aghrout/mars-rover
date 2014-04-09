@@ -133,12 +133,7 @@ Mac OS - http://www.mkyong.com/maven/install-maven-on-mac-osx/
 Possible Extensions
 ===================
 
-- Create custom Exceptions to handle:
-    - Incorrect input, from file or otherwise, that needs validating first
-    - The Rover being placed out of bounds of the Plateau
-    - The Rover moving out of bounds of the Plateau
-    - The Rover being constructed with a null Direction or Plateau
-- Allow the Rover to move backwards
+- Handle incorrect input, from file or otherwise, that needs validating first
 
 Finally
 =======
@@ -149,4 +144,3 @@ repository. If you do have any issues getting the code to run do not hesitate to
 Phone: (+44) 07718219995
 
 Email: aghrout.raouf@gmail.com
-

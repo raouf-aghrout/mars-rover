@@ -1,9 +1,9 @@
 package com.thoughtworks.marsrover.command;
 
 import com.thoughtworks.marsrover.BaseTest;
-import com.thoughtworks.marsrover.rover.Rover;
 import com.thoughtworks.marsrover.direction.NorthDirection;
 import com.thoughtworks.marsrover.direction.WestDirection;
+import com.thoughtworks.marsrover.rover.Rover;
 import org.junit.Before;
 import org.junit.Test;
 
