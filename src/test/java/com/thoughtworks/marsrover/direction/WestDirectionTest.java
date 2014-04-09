@@ -1,7 +1,7 @@
 package com.thoughtworks.marsrover.direction;
 
 import com.thoughtworks.marsrover.BaseTest;
-import com.thoughtworks.marsrover.Rover;
+import com.thoughtworks.marsrover.rover.Rover;
 import org.junit.Before;
 import org.junit.Test;
 

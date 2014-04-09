@@ -8,6 +8,8 @@ import com.thoughtworks.marsrover.direction.EastDirectionTest;
 import com.thoughtworks.marsrover.direction.NorthDirectionTest;
 import com.thoughtworks.marsrover.direction.SouthDirectionTest;
 import com.thoughtworks.marsrover.direction.WestDirectionTest;
+import com.thoughtworks.marsrover.rover.LocationOutOfBoundsExceptionTest;
+import com.thoughtworks.marsrover.rover.RoverTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -21,9 +23,10 @@ import org.junit.runners.Suite;
         NorthDirectionTest.class,
         SouthDirectionTest.class,
         WestDirectionTest.class,
+        RoverTest.class,
+        LocationOutOfBoundsExceptionTest.class,
         InputUtilTest.class,
-        PlateauTest.class,
-        RoverTest.class
+        PlateauTest.class
 })
 public class MarsRoverTestSuite extends BaseTest {
 

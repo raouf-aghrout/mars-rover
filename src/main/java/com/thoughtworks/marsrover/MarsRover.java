@@ -1,6 +1,7 @@
 package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.command.Command;
+import com.thoughtworks.marsrover.rover.Rover;
 
 import java.io.IOException;
 import java.util.ArrayList;

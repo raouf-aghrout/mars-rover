@@ -1,5 +1,7 @@
-package com.thoughtworks.marsrover;
+package com.thoughtworks.marsrover.rover;
 
+import com.thoughtworks.marsrover.BaseTest;
+import com.thoughtworks.marsrover.Plateau;
 import com.thoughtworks.marsrover.command.Command;
 import com.thoughtworks.marsrover.command.MoveForwardCommand;
 import com.thoughtworks.marsrover.command.SpinLeftCommand;

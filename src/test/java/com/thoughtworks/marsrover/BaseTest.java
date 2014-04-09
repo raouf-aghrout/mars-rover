@@ -2,6 +2,7 @@ package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.command.Command;
 import com.thoughtworks.marsrover.direction.Direction;
+import com.thoughtworks.marsrover.rover.Rover;
 
 public abstract class BaseTest {
 

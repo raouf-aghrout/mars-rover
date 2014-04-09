@@ -1,6 +1,6 @@
 package com.thoughtworks.marsrover.direction;
 
-import com.thoughtworks.marsrover.Rover;
+import com.thoughtworks.marsrover.rover.Rover;
 
 public class SouthDirection implements Direction {
 

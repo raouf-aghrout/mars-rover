@@ -2,6 +2,7 @@ package com.thoughtworks.marsrover;
 
 import com.thoughtworks.marsrover.command.*;
 import com.thoughtworks.marsrover.direction.NorthDirection;
+import com.thoughtworks.marsrover.rover.Rover;
 import org.junit.Test;
 
 import java.io.InputStream;

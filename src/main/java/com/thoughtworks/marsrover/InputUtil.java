@@ -4,6 +4,7 @@ import com.thoughtworks.marsrover.command.Command;
 import com.thoughtworks.marsrover.command.CommandLookup;
 import com.thoughtworks.marsrover.direction.Direction;
 import com.thoughtworks.marsrover.direction.DirectionLookup;
+import com.thoughtworks.marsrover.rover.Rover;
 
 import java.io.BufferedReader;
 import java.io.IOException;
