@@ -134,13 +134,3 @@ Possible Extensions
 ===================
 
 - Handle incorrect input, from file or otherwise, that needs validating first
-
-Finally
-=======
-
-I hope you find the code readable and intuitive, there is a .gitignore file, but all code has been uploaded to a private
-repository. If you do have any issues getting the code to run do not hesitate to contact me:
-
-Phone: (+44) 07718219995
-
-Email: aghrout.raouf@gmail.com
